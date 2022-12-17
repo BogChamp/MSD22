@@ -1,0 +1,16 @@
+Namespace(CRITIC_ITERS=5, RNN_hid_dim=10, batch_size=4, cuda=True, data_path='/content/MSD22/data/hasc.mat', eval_freq=25, gpu=0, grad_clip=10.0, lambda_ae=0.001, lambda_real=1.0, lr=0.0003, max_iter=2000, momentum=0.0, optim='adam', random_seed=1126, save_path='experiment_log/hasc.wnd-30.lambda_ae-0.001000.lambda_real-1.000000.clip-0.100000', sub_dim=1, trn_ratio=0.6, val_ratio=0.8, weight_clip=0.1, weight_decay=0.0, wnd_dim=5)
+Using GPU device 0
+n_trn  23614 n_val  7879 n_tst  7879
+NetG(
+  (rnn_enc_layer): GRU(3, 10, batch_first=True)
+  (rnn_dec_layer): GRU(3, 10, batch_first=True)
+  (fc_layer): Linear(in_features=10, out_features=3, bias=True)
+)
+NetD(
+  (rnn_enc_layer): GRU(3, 10, batch_first=True)
+  (rnn_dec_layer): GRU(10, 3, batch_first=True)
+)
+netG has number of parameters: 933
+netD has number of parameters: 585
+tcmalloc: large alloc 7200006144 bytes == 0x7f41dafd6000 @  0x7f4471ac41e7 0x7f446f38e14e 0x7f446f3e6745 0x7f446f3e6878 0x7f446f4a6604 0x7f446f4a953d 0x7f446f631cab 0x7f446f633bda 0x4eafcf 0x5d935e 0x6076c6 0x513bec 0x56071e 0x55d078 0x5d8941 0x49abe4 0x55cd91 0x5d8941 0x4990ca 0x55d078 0x5d8941 0x49abe4 0x55d078 0x5d8941 0x49abe4 0x55cd91 0x55d743 0x642630 0x6426ae 0x644b78 0x64511c
+tcmalloc: large alloc 3599884288 bytes == 0x7f40ccc68000 @  0x7f4471ac41e7 0x7f446f38e14e 0x7f446f3e6745 0x7f446f3e6878 0x7f446f47a84c 0x7f446f47bb1f 0x518079 0x55e284 0x4f6097 0x5172b5 0x5d8bb5 0x55dc1e 0x55d078 0x5d8941 0x49abe4 0x55cd91 0x5d8941 0x5d8416 0x7f446f3d0944 0x5d814d 0x5d8d8c 0x55dc1e 0x55cd91 0x5d8941 0x49abe4 0x55d078 0x5d8941 0x49abe4 0x55cd91 0x55d743 0x642630
